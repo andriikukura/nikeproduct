@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+ background: #b2b2b4 url(../img/main-bg.jpeg) no-repeat center fixed;
+ background-size: cover;
+ font-family: 'Nunito', sans-serif;
+}
+
+.product-card {
+	background-color: #111a28;
+	border-radius: 8px;
+	margin: auto;
+	width: 680px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 390px;
+
+}
+
+a {
+	width: 100%;
+	display: block;
+}
+
+.product-card__logo {
+	padding-top: 25px;
+	padding-left: 20px;
+	/*padding-bottom: 70px;*/
+} 
+
+
+/*.slider__shoes {
+	padding-left: 35px;
+	padding-top: 70px;
+}*/
+
+
+.sliderA {
+        width: 59%;
+        height: 75px;
+        
+        position: relative;
+        text-align: center;
+        margin-top: 70px;
+        display: inline-block;
+        
+
+    }
+.sliderA div {
+	display: inline-block;
+	 position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+    
+}
+
+.sliderA img {
+	    top: -130px;
+    left: 20px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.sliderA input {
+        display: none;
+    }
+
+
+
+
+
+.sliderA > input + label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 8px;
+         background: #1f273f;
+        border: 2px solid rgba(190, 190, 190, 0.8);
+
+        cursor: pointer;
+
+        z-index: 100;
+        position: relative;
+
+        margin-right: 4px;
+        top: 90%;
+
+        transition: background 0.8s ease-out 0s;
+
+         -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    }
+
+	.sliderA > input + label:hover {
+        background: rgba(237, 51, 51, 0.8);
+        -webkit-transform: scale(1.3,1.3);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    }
+
+    .sliderA > input:checked + label {
+        background: rgba(237, 51, 51, 0.8);
+        transform: scale(1,1);
+    }
+
+    /*   .sliderA > div {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+    }*/
+
+    .sliderA > input:checked + label + div {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+    }
+
+
+.title {
+	display: inline-block;
+	width: 35%;
+}
+
+.title h1 {
+	font-size: 24px;
+	color: #e1e1e1;
+}
+
+.title p {
+	font-size: 14px;
+	color: #8d9094;
+}
+
+
+/*Stars*/
+
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:100%;
+    line-height:1.2;
+    color:#ddd;
+    /*text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);*/
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/*Bottons*/
+
+.size-qty {
+	border: #4f5560 solid 1px;
+	text-decoration: none;
+	background-color: #111a28;
+	color: #797d84;
+	cursor: pointer;
+	height: 32px;
+	width: 70px;
+	font-size: 14px;
+}
+
+
+.cart {
+	border: #4f5560 solid 1px;
+	text-decoration: none;
+	background-color: #111a28;
+	color: #797d84;
+	cursor: pointer;
+	height: 40px;
+	width: 185px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.size-qty:hover {
+	background-color: #202835;
+}
+ .cart:hover {
+	background-color: #202835;
+
+}
+
+
+
+
+
+
+
+/* Layout */
+.layout{
+	
+	width: 100%;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
