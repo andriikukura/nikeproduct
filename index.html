@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>NikeProductCard</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 	
 	
@@ -17,11 +18,11 @@
 
 				<div class='sliderA '>
 
-					<input type="radio" name="slider1" id="slider1_1" checked="checked">
-					<label for="slider1_1" ></label>
+					<input type="radio" name="slider1" id="slider1_1" checked>
+					<label class="red" for="slider1_1" ></label>
 					<div > <img src="img/logo-shoes.png" alt=""></div>
 
-					<input type="radio" name="slider1" id="slider1_2" checked="checked">
+					<input type="radio" name="slider1" id="slider1_2" >
 					<label for="slider1_2" "></label>
 					<div > <img src="img/logo-shoes2.png" alt=""></div>
 
@@ -47,11 +48,15 @@
 						<input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
 					</div><br>
 
-					<form action="">
-					<input type="button" value="Size ∨" class="size-qty">
-					<input type="button" value="Qty ∨" class="size-qty">
-					<input type="button" value="Qty ∨" class="cart">
+					<form action="" class="form-button">
+					<button class="size-qty" value="Size">Size <i class="fa fa-angle-down" aria-hidden="true"></i>
+						</button>
+					<button class="size-qty" value="Qty">Qty <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+					<button class="cart" value="Add to cart">Add to cart</button>
 					</form>
+
+					
+
 				</div>
 				
 

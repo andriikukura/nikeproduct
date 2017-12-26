@@ -45,7 +45,7 @@ a {
 
 .sliderA {
         width: 59%;
-        height: 75px;
+        height: 50px;
         
         position: relative;
         text-align: center;
@@ -69,7 +69,7 @@ a {
 }
 
 .sliderA img {
-	    top: -130px;
+	    top: -155px;
     left: 20px;
     bottom: 0;
     right: 0;
@@ -118,7 +118,10 @@ a {
         background: rgba(237, 51, 51, 0.8);
         transform: scale(1,1);
     }
-
+     .sliderA > input:nth-child(even):checked + label {
+        background: yellow;
+        transform: scale(1,1);
+    }
     /*   .sliderA > div {
         visibility: hidden;
         opacity: 0;
@@ -207,6 +210,10 @@ a {
 }
 
 /*Bottons*/
+
+.form-button {
+    margin-top: 20px;
+}
 
 .size-qty {
 	border: #4f5560 solid 1px;
