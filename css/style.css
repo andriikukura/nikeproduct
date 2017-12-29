@@ -45,7 +45,7 @@ a {
 
 .sliderA {
         width: 59%;
-        height: 50px;
+        height: 45px;
         
         position: relative;
         text-align: center;
@@ -57,7 +57,7 @@ a {
 .sliderA div {
 	display: inline-block;
 	 position: absolute;
-        top: 0px;
+        top: -50px;
         left: 0px;
         right: 0px;
         bottom: 0px;
@@ -211,41 +211,51 @@ a {
 
 /*Bottons*/
 
-.form-button {
+.ba-card-info__forms {
     margin-top: 20px;
 }
 
-.size-qty {
-	border: #4f5560 solid 1px;
-	text-decoration: none;
-	background-color: #111a28;
-	color: #797d84;
-	cursor: pointer;
-	height: 32px;
-	width: 70px;
-	font-size: 14px;
+.ba-card-info__form {
+    float: left;
+    margin-left: 3px;
+    border: 1px solid #4f5560;
+}
+
+.ba-card-info__select {
+    width: 70px;
+    height: 30px;
+    padding: 0 10px;
+    background: transparent;
+    font-family: "museo_sans100";
+    font-size: 14px;
+    color: rgba(225,225,225,0.54);
+    font-weight: 100;
+    border: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;       /* remove default arrow */
+    background: url(../img/select.png) no-repeat 85% #111a28; 
+    cursor: pointer;  /* add custom arrow */
+}
+
+/*Button*/
+.ba-button {
+    min-width: 185px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 25px 0 30px 2px;
+    color: rgba(225,225,225,0.54);
+    background-color: #202835;
+    border: 1px solid #4f5560;
+    cursor: pointer;
+}
+
+.ba-button:hover {
+    opacity: 0.8;
 }
 
 
-.cart {
-	border: #4f5560 solid 1px;
-	text-decoration: none;
-	background-color: #111a28;
-	color: #797d84;
-	cursor: pointer;
-	height: 40px;
-	width: 185px;
-	font-size: 14px;
-	margin-top: 30px;
-}
-
-.size-qty:hover {
-	background-color: #202835;
-}
- .cart:hover {
-	background-color: #202835;
-
-}
 
 
 
